@@ -1,0 +1,42 @@
+import React, {useState} from 'react';
+import {Text, StyleSheet} from 'react-native';
+import {SafeAreaView, SafeAreaProvider} from 'react-native-safe-area-context';
+
+const TextInANest = () => {
+  const [titleText, setTitleText] = useState("RALPH ADRIAN GARDE");
+  const bodyText = 'THE ROLE THAT I TAKE IN OUR SYSARCH1 IS THE USER MANUAL THE THE CHALLANGE THE WE ENCOUNTER IS IN HOW TO DESIGN OUR USER MANUAL AND THE OUTPUT OF THE MANUAL BECAUSE WE THE PROGRAM AT THAT TIME IS NOT FINISH SO WE NEED TO CONSTANTLY CHANGE THE OUTPUT TO FINALYZE IT NAD IN THE FINAL OUTPUT OF OUR MANUAL IS PRINTED IN SMALL SIZE SO WE NEED TO CHANGE IT AGAIN';
+
+  const onPressTitle = () => {
+    setTitleText("RALPH ADRIAN GARDE [pressed]");
+  };
+
+  return (
+    <SafeAreaProvider>
+      <SafeAreaView style={styles.container}>
+        <Text style={styles.baseText}>
+          <Text style={styles.titleText} onPress={onPressTitle}>
+            {titleText}
+            {'\n'}
+            {'\n'}
+          </Text>
+          <Text numberOfLines={5}>{bodyText}</Text>
+        </Text>
+      </SafeAreaView>
+    </SafeAreaProvider>
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+  baseText: {
+    fontFamily: 'Cochin',
+  },
+  titleText: {
+    fontSize: 20,
+    fontWeight: 'bold',
+  },
+});
+
+export default TextInANest;
