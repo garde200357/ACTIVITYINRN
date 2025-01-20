@@ -1,0 +1,33 @@
+import React from 'react';
+import {View, Text, Image, ScrollView, TextInput} from 'react-native';
+
+const App = () => {
+  return (
+    <ScrollView>
+    
+      <Text style={{alignItems: 'center',margin:"AUTO"}}>I HAVE A APPLE</Text>
+      <View>
+      
+        <Text style={{alignItems: 'center',margin:"AUTO"}}>Some more text</Text>
+        <Image
+          source={{
+            uri: 'https://th.bing.com/th/id/R.517aca2a65ebdb191e6f7de2dc3a42f1?rik=hksE2fjwuhX70g&riu=http%3a%2f%2fwww.onewheaton.com%2funtold%2fwp-content%2fuploads%2f2015%2f02%2fapples2.jpg&ehk=46CMLUj0sQwwMwRpDJAwl8EGzCBAHgfZfUoYIKlMwOo%3d&risl=&pid=ImgRaw&r=0',
+          }}
+          style={{width: 200, height: 200, alignItems: 'center',margin:"AUTO"}}
+        />
+      </View>
+      <TextInput
+        style={{
+          height: 40,
+          borderColor: 'gray',
+          borderWidth: 1,
+          padding: 20
+          
+          
+        }}
+        defaultValue="YOU CAN EAT ME"
+      />
+    </ScrollView>
+  );
+};
+export default App;
